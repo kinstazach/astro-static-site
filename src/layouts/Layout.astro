@@ -4,6 +4,7 @@ interface Props {
 }
 
 const { title } = Astro.props;
+const { custom_header } = process.env.mk_header;
 ---
 
 <!DOCTYPE html>
@@ -17,7 +18,8 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<slot />
+                <div>{custom_header}</div>
+		<slot />                
 	</body>
 </html>
 <style is:global>
