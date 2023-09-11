@@ -1,11 +1,10 @@
 --- 
 interface Props {
 	title: string;
-        custom_header: string;
 }
 
 const { title } = Astro.props;
-const { custom_header } = import.meta.env.PUBLIC_MK_HEADER;
+const custom_header = import.meta.env.PUBLIC_MK_HEADER;
 ---
 
 <!DOCTYPE html>
